@@ -163,3 +163,5 @@ settings is an object that accepts some properties like:
 
 
 All done, Have Fun!
+
+Made by Ettore Marques Cimino and Victor Machado de França.
