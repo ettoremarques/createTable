@@ -1,6 +1,6 @@
 # createTable
 
-createTable is a Vanilla Javascript library for creating table with scroll pagination easily
+createTable is a Vanilla Javascript library that allows you to easily create tables with scroll pagination
 
 ## Usage
 
@@ -17,7 +17,7 @@ $table is your table element selector
 
 ### settings
 
-settings is an object that accepts some properties like:
+settings is an object that accepts some properties such as:
 
     load, onBeforeLoad, onAfterLoad, ordering, scrolling, printSelector and csvSelector
 
@@ -37,7 +37,7 @@ settings is an object that accepts some properties like:
 
 #### load
     Load is a required function that waits the resolve of a promise with the data to be insert to initiate.
-    When called it returns an object with some table parameters like:
+    When called it returns an object with some table parameters such as:
         {
             sortDirection: string,
             sortField: string,
@@ -62,7 +62,7 @@ settings is an object that accepts some properties like:
 ```
 
 ##### sortDirection
-    sortingDirection will return a string and it can has "asc" or "desc" as value
+   sortingDirection will return a string and it can have "asc" or "desc" as it’s value
 
 ##### sortField
     sortField will return the data-name attribute from the selector with the class .sorting_asc/.sorting_desc
@@ -71,7 +71,7 @@ settings is an object that accepts some properties like:
     It will return which page we are at, starts with value "1" and it's incremented by 1 each time we scroll
 
 ##### start
-    It will return the size of the tr's in the tbody
+    It will return the tr's length in the tbody
 
 #### onBeforeLoad
     onBeforeLoad is a function for actions to be done before executing the load function.
