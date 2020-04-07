@@ -38,33 +38,46 @@ settings is an object that accepts some properties like:
 #### load
     Load is a required function that waits the resolve of a promise with the data to be insert to initiate.
     When called it returns an object with some table parameters like:
-        
-        sortDirection: string,
-        sortField: string,
-        page: number,
-        start: number
+        {
+            sortDirection: string,
+            sortField: string,
+            page: number,
+            start: number
+        }
 
-    exemple:
+    example:
     
-    ```bash
+```bash
         function load(tableAttributes) {
         return new Promise ((resolve, reject) => {
             
-            let reqExemple;
+            let reqexample;
 
-            $.Ajax(reqExemple).then(data => {
+            $.Ajax(reqexample).then(data => {
                 resolve(data.dataToBeUsed);
             })
 
         })
     }
-    ```
+```
+
+##### sortDirection
+    sortingDirection will return a string and it can has "asc" or "desc" as value
+
+##### sortField
+    sortField will return the data-name attribute from the selector with the class .sorting_asc/.sorting_desc
+
+##### page
+    It will return which page we are at, starts with value "1" and it's incremented by 1 each time we scroll
+
+##### start
+    It will return the size of the tr's in the tbody
 
 #### onBeforeLoad
     onBeforeLoad is a function for actions to be done before executing the load function.
 
     when called, it returns a parameter Scroll. it has boolean value and indicate if the function call is being made by a scroll or not,
-    so you can differentiate which loader to call for exemple
+    so you can differentiate which loader to call for example
 
     ```bash
         function onBeforeLoad(scroll) {
@@ -79,15 +92,15 @@ settings is an object that accepts some properties like:
     
     onAfterLoad is a function for actions to be done after executing the load function.
     when called, it returns a parameter Scroll. it has boolean value and indicate if the function call is being made by a scroll or not,
-    so you can differentiate which loader to call for exemple
+    so you can differentiate which loader to call for example
 
-    ```bash
+```bash
         function onBeforeLoad(scroll) {
 
             **actions to be made after creating the table
 
         }
-    ```
+```
 #### ordering
 
     ordering is a parameter with boolean value for telling if ordering in table header is necessary or not.
@@ -109,15 +122,16 @@ settings is an object that accepts some properties like:
 
     you can leave the table body empty, but you have to fill the table-head to indicate which column is which adding data-name attribute to each th element
 
-    ```bash
+```bash
         <thead>
             <th data-name=""></th>
         </thead>
-    ```
+```
 
-    the data-name attribute should match the propertie received on your request, for exemple:
+    the data-name attribute should match the propertie received on your request, for example:
 
     Request Response:
+
  ```bash
         data: [
             {
@@ -146,9 +160,9 @@ settings is an object that accepts some properties like:
 
     You should add one of two classes, sorting_asc or sorting_desc to one of the table header
 
-    For exemple:
+    For example:
 
-    ```bash
+```bash
         JS file:
             settings.ordering = true;
 
@@ -159,7 +173,7 @@ settings is an object that accepts some properties like:
             <th data-name="fruit-two">Fruit Two</th>
             <th data-name="fruit-three">Fruit Three</th>
         </thead>
-    ```
+```
 
 
 All done, Have Fun!
