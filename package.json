@@ -1,0 +1,22 @@
+{
+  "name": "createtable",
+  "version": "1.0.0",
+  "description": "library that allows you to easily create tables with scroll pagination",
+  "main": "createTable.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ettoremarques/createTable.git"
+  },
+  "keywords": [
+    "createTable"
+  ],
+  "author": "Ettore Marques Cimino and Victor Machado de França",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ettoremarques/createTable/issues"
+  },
+  "homepage": "https://github.com/ettoremarques/createTable#readme"
+}
